@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+  }
+  body{
+    background-color: #26afa493;
+    
+  }
+  .navegador{
+    display:flex;
+    position:relative;
+    top:40px;
+  
+  }
+  ul{
+    list-style:none;
+    position: relative;
+    text-align: center;
+    top: 40%;
+  }
+  img {
+   max-width: 100%;
+   max-height: 100%;
+  }
+  li{
+    display:inline-block;
+  }
+  .centrar{
+    text-align: center;
+  }
+  footer{
+      clear: both;
+      position: relative;
+      margin-top: -200px;
+  }
+  .contenido-menu{
+   text-align: center;
+  }
+.nav{
+  padding-bottom: 50px;
+  background-color:turquoise;
+  border:2px solid blue;
+}
+.foot{
+  background-color: gray;
+  border:2px solid black ;
+}
+.news-cards{
+  display:flex;
+  gap:25px;
+  margin :10px 0
+}
+.news-cards img{
+  width: 100%;
+  height: 180px;
+}
+.news-cards h3 {
+  font-size:20px;
+  margin :10px 0 ;
+}
+.news-cards a {
+  padding: 20px 0 ;
+  color: white;
+  text-transform: uppercase;
+  display: inline-block;
+}
+.news-cards a:hover
+{
+  text-decoration: underline;
+}
+.cards-banner-one{
+  
+  background: url('./img/thumb-1920-912465.jpg');
+  width: 100%;
+  height: 500px;
+  margin-bottom: 40px;
+}
+.cards-banner-one .content{
+  width: 40%;
+  padding: 90px 0 0  30px;
+  color :white
+  
+}
+.opcion{
+  height:500px;
+  width: 500px;
+}
+.contenido-central{
+  align-items: center;
+  text-align: center;
+}
+.renderizado{
+  height:400px;
+  width: 550%;
+}
+.centrarse{
+  text-align: center;
+  border: 2px solid black;
+  
+}
+.centro{
+  text-align: center;
+  border: 2px solid black;
+  background-color: white;
+  
+}
+.buscador{
+  margin-left:4%
+}
+a {
+  text-decoration: none;
+}
+.publicidad{
+  width: 300px;
+  height:300px;
+  margin:10px;
+  
+}

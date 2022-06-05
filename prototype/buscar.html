@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Arica Treasures</title>
+      <!-- CSS only -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <link href="/estilos/estilos2.css"rel="stylesheet"type="text/css"/>
+      <script src="javascript.js"></script>   
+  </head>
+
+  <body>
+    <div class="nav row justify-content-center">
+      <nav class="col-10 navegador">
+        <h1 class="col-2 logo">
+        <img src="imagenes/Arica.jpg" alt="Logo" class="rounded-circle">
+        </h1>
+        <ul class="col-6 text-primary">
+          <li><a href="/inicio.html">Inicio</a></li>
+          <li><a href="/buscar.html">Buscar</a></li>
+          <li><a href="/lugares.html">Lugares</a></li>
+        </ul>
+        <ul class="col-2 text-primary">
+          <li><a href="/ingresar.html">Ingresar</a></li>
+        </ul>
+      </nav>
+    </div>
+    <br>
+
+    <div class="row row-cols-2">
+    <main class="col-8">
+      <div>
+        <div class="col-8 buscador">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="buscador">Buscar</span>
+          </div>
+          <input type="text" class="form-control" placeholder="Ingrese un lugar..." aria-label="Buscador" aria-describedby="buscador">
+          <div class="input-group-append">
+            <button class="btn btn-secondary" type="button" id="botonBuscar">Buscar</button>
+          </div>
+
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Filtrar</button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Mejor Valorados</a>
+            <a class="dropdown-item" href="#">Mas Comentados</a>
+            <a class="dropdown-item" href="#">Mas Recientes</a>
+          </div>
+        </div>
+        </div>
+      </div>
+      
+      <div class="col-8 buscador">
+        <div class="card flex-md-row mb-4 box-shadow h-md-250">
+          <img class="card-img-left flex-auto d-none d-md-block"  alt="PlayaChinchorro" style="width: 300px; height: 260px;" src="https://i.ytimg.com/vi/MbBY5Y2TEv0/maxresdefault.jpg" data-holder-rendered="true">
+          <div class="card-body d-flex flex-column align-items-start">
+            <h3 class="mb-0">
+              <a class="text-dark" href="/lugares.html">Playa Chinchorro</a>
+            </h3>
+            <p class="card-text mb-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus odio voluptatum voluptates sint tempora. Ipsum saepe facere vel 
+              quia est assumenda illum molestias iste maxime, recusandae laudantium, soluta enim reiciendis.</p><br>
+              <p>&#9733 &#9733 &#9733 &#9733</p>
+            <a href="#">Ver</a>
+          </div>
+        </div>
+      </div>
+    
+
+      <div class="col-8 buscador">
+        <div class="card flex-md-row mb-4 box-shadow h-md-250">
+          <img class="card-img-left flex-auto d-none d-md-block"  alt="PlayaChinchorro" style="width: 300px; height: 260px;" src="https://enviajes.cl/wp-content/uploads/2021/12/Arica-Catedral-Enviajes.jpg" data-holder-rendered="true">
+          <div class="card-body d-flex flex-column align-items-start">
+            <h3 class="mb-0">
+              <a class="text-dark" href="#">Catedral San Marcos</a>
+            </h3>
+            <p class="card-text mb-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus odio voluptatum voluptates sint tempora. Ipsum saepe facere vel 
+              quia est assumenda illum molestias iste maxime, recusandae laudantium, soluta enim reiciendis.</p><br>
+            <p>&#9733 &#9733 &#9733 &#9733 &#9733</p>
+            <a href="#">Ver</a>
+          </div>
+        </div>
+      </div>
+      
+      
+
+      <div class="col-8 buscador">
+        <div class="card flex-md-row mb-4 box-shadow h-md-250">
+          <img class="card-img-left flex-auto d-none d-md-block"  alt="PlayaChinchorro" style="width: 300px; height: 260px;" src="http://img.soy-chile.cl/Fotos/2018/02/23/file_20180223094751.jpg" data-holder-rendered="true">
+          <div class="card-body d-flex flex-column align-items-start">
+            <h3 class="mb-0">
+              <a class="text-dark" href="#">Playa La Lisera</a>
+            </h3>
+            <p class="card-text mb-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus odio voluptatum voluptates sint tempora. Ipsum saepe facere vel 
+              quia est assumenda illum molestias iste maxime, recusandae laudantium, soluta enim reiciendis.</p><br>
+              <p>&#9733 &#9733 &#9733 &#9733</p>
+            <a href="#">Ver</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <article class="col-4">
+      <div class="col-4 publicidad">
+        <img class ="publi"src="https://i.pinimg.com/550x/2a/40/c7/2a40c735a818e53d701904c5c3d84112.jpg" alt="auto-publicidad">
+      </div>
+      <div class="col-4 publicidad">
+        <img class ="publi"src="https://i.pinimg.com/474x/b4/e3/85/b4e385df02980536ff75ebe2cb7bb56a.jpg" alt="auto-publicidad">
+      </div>
+      <div>
+        <iframe class="publicidad"src="https://www.youtube.com/embed/j65L6eB34m0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen></iframe>
+      </div>
+     
+    </article>
+    </div>
+    
+    <div class="foot row justify-content-center">
+      <footer class="text-center text-lg-start">
+      <!-- Copyright -->
+      <div class="text-center p-4">
+        © 2020 Copyright Treasure Arica
+      </div>
+      <!-- Copyright -->
+      </footer> 
+    </div>
+  </body> 
+</html>
