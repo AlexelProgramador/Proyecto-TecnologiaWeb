@@ -23,108 +23,47 @@
     ></script>
   </head>
   <body>
-    <div class="navi row justify-content-center">
-      <nav class="col-10 navegador">
-        <h1 class="col-2 logo"></h1>
-        <ul class="col-6 text-primary">
-          <li><a href="../prototype/inicio.html">Inicio</a></li>
-          <li><a href="../prototype/buscar.html">Buscar</a></li>
-          <li><a href="../prototype/lugares.html">Lugares</a></li>
-        </ul>
-        <ul class="col-2 text-primary">
-          <li><a href="../prototype/ingresar.html">Ingresar</a></li>
-        </ul>
-      </nav>
-    </div>
-    <br />
+<!-- Search functionality -->
+    <nav class="navbar navbar-light justify-content-center mt-4">
+      <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Type a name" aria-label="Search" id="search">
+        <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+      </form>
+    </nav>
 
-    <div class="row row-cols-2">
-      <main class="col-8">
-        <div>
-          <div class="col-8 buscador">
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="buscador">Buscar</span>
-              </div>
-              <input
-                type="text"
-                class="form-control inputControl"
-                placeholder="Ingrese un lugar..."
-                aria-label="Buscador"
-                aria-describedby="buscador"
-              />
-              <div class="input-group-append">
-                <button
-                  class="btn btn-secondary botonBuscar"
-                  type="button"
-                  id="botonBuscar"
-                >
-                  Buscar
-                </button>
-              </div>
-              <!-- Prueba -->
-              <div class="dropdown">
-                <button
-                  class="btn btn-secondary dropdown-toggle"
-                  type="button"
-                  id="dropdownMenuButton"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Filtro
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">Playa</a>
-                  <a class="dropdown-item" href="#">Morro</a>
-                  <a class="dropdown-item" href="#">Catedral</a>
-                </div>
-              </div>
-              <!-- Fin prueba -->
-            </div>
+    <!-- Cards -->
+    <div class="layout-margin-8 mt-5">
+      <div class="card-deck">
+        <div class="card card-shadow text-center">
+          <div class="card-body">
+            <h4 class="card-title">Rob Doe</h4>
+            <p class="card-text">UX Designer</p>
+            <div class="dropdown-divider"></div>
+            <p class="card-text"><small class="text-muted">Team A</small></p>
+            <a href="#"><button type="button" class="btn btn-outline-primary">Email</button></a>
           </div>
         </div>
-        <div class="container">
-          <div class="lugar">playa</div>
-          <div class="lugar">morro</div>
-          <div class="lugar">catedral</div>
+        <div class="card card-shadow text-center">
+          <div class="card-body">
+            <h4 class="card-title">Scott Doe</h4>
+            <p class="card-text">UX Designer</p>
+            <div class="dropdown-divider"></div>
+            <p class="card-text"><small class="text-muted">Team B</small></p>
+            <a href="#"><button type="button" class="btn btn-outline-primary">Email</button></a>
+          </div>
         </div>
-      </main>
+        <div class="card card-shadow text-center">
+          <div class="card-body">
+            <h4 class="card-title">John Doe Vasile</h4>
+            <p class="card-text">Product Designer</p>
+            <div class="dropdown-divider"></div>
+            <p class="card-text"><small class="text-muted">Team C</small></p>
+            <a href="#"><button type="button" class="btn btn-outline-primary">Email</button></a>
+          </div>
+        </div>
+        </div>
+      </div>
 
-      <article class="col-4">
-        <div class="col-4 publicidad">
-          <img
-            class="publi"
-            src="https://i.pinimg.com/550x/2a/40/c7/2a40c735a818e53d701904c5c3d84112.jpg"
-            alt="auto-publicidad"
-          />
-        </div>
-        <div class="col-4 publicidad">
-          <img
-            class="publi"
-            src="https://i.pinimg.com/474x/b4/e3/85/b4e385df02980536ff75ebe2cb7bb56a.jpg"
-            alt="auto-publicidad"
-          />
-        </div>
-        <div>
-          <iframe
-            class="publicidad"
-            src="https://www.youtube.com/embed/j65L6eB34m0"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
-      </article>
-    </div>
-
-    <div class="foot row justify-content-center">
-      <footer class="text-center text-lg-start">
-        <!-- Copyright -->
-        <div class="text-center p-4">© 2020 Copyright Treasure Arica</div>
-        <!-- Copyright -->
-      </footer>
       <script
         src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="

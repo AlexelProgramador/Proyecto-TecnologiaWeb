@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <!-- Fin Bootstrap -->
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Comienzo Encabezado -->
+
+    <nav class="navbar sticky-top navbar-dark bg-dark navbar-expand-sm">
+      <!-- Logo -->
+      <a class="navbar-brand" href="#">Logo</a>
+      <!-- Boton para movil -->
+      <button
+        class="navbar-toggler navbar-toggler-left"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarTogglerDemo01"
+        aria-controls="navbarTogglerDemo01"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <!-- Opciones menu -->
+        <div class="navbar-nav mr-auto ml-auto text-center">
+          <a href="index.html" class="nav-item nav-link text-white">Inicio</a>
+          <a href="buscar.html" class="nav-item nav-link text-white">Buscar</a>
+        </div>
+        <div class="d-flex flex-row text-center justify-content-center">
+          <a
+            name="Ingresar"
+            id="ingresar"
+            class="text-white"
+            href="ingresar.html"
+            role="button"
+            >ingresar</a
+          >
+        </div>
+      </div>
+    </nav>
+    <!-- Fin Encabezado -->
+    <!-- Comienzo Contenido -->
+    <div class="container-fluid mt-3">
+      
+      <div class="col-md-12">
+        <!-- Comienzo del registro -->
+        <div class="card">
+          <div class="card-header" style="background-color: white;">
+            <!-- Botones para logearse y registrarse -->
+            <button type="button"  class="btn  ingresar btn-primary active">Ingresar</button>
+            <button type="button"  class="btn registrarse btn-primary disabled">Registrarse</button>
+
+            <!-- <button type="submit" class="btn btn-primary ingresar">Ingresar</button>
+            <button type="submit" class="btn btn-primary registrarse">Registrarse</button> -->
+          </div>
+          <div class="card-body">
+            <!-- Formulario para ingresar o registrarse -->
+              <form>
+                <div class="form-group">
+                    <label for="usuario">Usuario</label>
+                    <input type="text" class="form-control" name="usuario" placeholder="Usuario">
+                </div>
+                <div class="form-group email">
+                  <label for="email">Email</label>
+                  <input type="email" class="form-control" name="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Contrasenha</label>
+                    <input type="password" class="form-control" name="password" placeholder="Contrasenha">
+                </div>
+                <a href="index.html">
+                    <button type="button" class="btn btn-primary btnForm">Ingresar</button>
+                </a>
+            </form>
+          </div>
+          <div class="card-footer text-muted">
+            <!-- Link para formulario de olvidar contrasenha -->
+            <a href="#" class="badge badge-light">olvidaste tu contrasenha?</a>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <!-- Fin Contenido -->
+    <!-- Comienzo pie pagina -->
+    <footer class="col-12 text-center text-lg-start">
+      <!-- Copyright -->
+      <div class="text-center p-4">© 2020 Copyright Treasure Arica</div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Fin pie pagina -->
+    <!-- Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Fin Bootstrap -->
+    <!-- JQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Fin JQuery -->
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
+
+<!-- 
+        etiquetas con tamanhos de resolucion
+        <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2" style="background-color: red">s</div>
+        <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2" style="background-color: blue">f</div>
+        <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8" style="background-color: yellow">a</div>
+
+
+ -->

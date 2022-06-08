@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <!-- Fin Bootstrap -->
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Comienzo Encabezado -->
+
+    <nav class="navbar sticky-top navbar-dark bg-dark navbar-expand-sm">
+      <!-- Logo -->
+      <a class="navbar-brand" href="#">Logo</a>
+      <!-- Boton para movil -->
+      <button
+        class="navbar-toggler navbar-toggler-left"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarTogglerDemo01"
+        aria-controls="navbarTogglerDemo01"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <!-- Opciones menu -->
+        <div class="navbar-nav mr-auto ml-auto text-center">
+          <a href="index.html" class="nav-item nav-link text-white">Inicio</a>
+          <a href="buscar.html" class="nav-item nav-link text-white">Buscar</a>
+        </div>
+        <div class="d-flex flex-row text-center justify-content-center">
+          <a
+            name="Ingresar"
+            id="ingresar"
+            class="text-white"
+            href="ingresar.html"
+            role="button"
+            >ingresar</a
+          >
+        </div>
+      </div>
+    </nav>
+    <!-- Fin Encabezado -->
+    <!-- Comienzo Contenido -->
+    <div class="container-fluid">
+      <!-- Carousel -->
+      <div class="row">
+        <div class="card">
+          <img class="card-img-top" src="holder.js/100px180/" alt="" />
+          <div class="card-body">
+            <div
+              id="carouselExampleIndicators"
+              class="carousel slide"
+              data-ride="carousel"
+            >
+              <ol class="carousel-indicators">
+                <li
+                  data-target="#carouselExampleIndicators"
+                  data-slide-to="0"
+                  class="active"
+                ></li>
+                <li
+                  data-target="#carouselExampleIndicators"
+                  data-slide-to="1"
+                ></li>
+              </ol>
+              <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                  <img
+                    class="d-block w-100"
+                    src="https://mayurutour.com/wp-content/uploads/2020/01/catedral_san_marcos.jpg"
+                    data-src="holder.js/900x400?theme=social"
+                    alt="First slide"
+                    style="width: 800px; height: 500px"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    class="d-block w-100"
+                    src="https://www.monumentos.gob.cl/sites/default/files/styles/slide_monumentos/public/image-monumentos/00381_mh_15101-24.jpg?itok=spqag_j_"
+                    data-src="holder.js/900x400?theme=industrial"
+                    alt="Second slide"
+                    style="width: 800px; height: 500px"
+                  />
+                </div>
+              </div>
+              <a
+                class="carousel-control-prev"
+                href="#carouselExampleIndicators"
+                role="button"
+                data-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a
+                class="carousel-control-next"
+                href="#carouselExampleIndicators"
+                role="button"
+                data-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+          <!-- Fin carousel -->
+          <!-- Descripcion del lugar -->
+          <div class="card-footer text-center">
+            <!-- Titulo -->
+            <p class="card-text">Catedral San Marcos de Arica</p>
+            <!-- Descripcion -->
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Provident, at.
+            </p>
+            <!-- Ubicacion -->
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.1030070093866!2d-70.32292478510784!3d-18.478992787433242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915aa993f7db0017%3A0xf29695af2202b7ba!2sCatedral%20de%20San%20Marcos!5e0!3m2!1ses-419!2scl!4v1654651981921!5m2!1ses-419!2scl"
+              width="400"
+              height="400"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <!-- Fin descripcion del lugar -->
+        </div>
+      </div>
+    </div>
+    <!-- Comentarios -->
+    <div class="card card-shadow text-center">
+      <div class="card-body">
+        <img
+          src="https://mpng.subpng.com/20180411/rzw/kisspng-user-profile-computer-icons-user-interface-mystique-5aceb0245aa097.2885333015234949483712.jpg"
+          alt="Catedral San Marcos de Arica"
+          class="img-fluid"
+          style="width: 100px"
+        />
+        <h4 class="card-title">Usuario#3021</h4>
+        <p class="card-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+          porro id necessitatibus ullam ipsam dicta, repellat deserunt sapiente
+          ab.
+        </p>
+        <p class="card-text">
+          <small class="text-muted">Comentado hace 3 minutos</small>
+        </p>
+      </div>
+    </div>
+    <div class="card sm-3">
+      <div class="row no-gutters">
+        <div class="col-sm-4">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/d/d3/User_Circle.png"
+            class="card-img mt-5 ml-5"
+            alt="..."
+            style="width: 100px"
+          />
+        </div>
+        <div class="col-sm-8">
+          <div class="card-body">
+            <h4 class="card-title">Usuario#2503</h4>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+              sint vitae necessitatibus id laboriosam provident eum aliquid
+              nostrum a hic.
+            </p>
+            <p class="card-text">
+              <small class="text-muted">Comentado el dia 31/05/22</small>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Fin Contenido -->
+    <!-- Comienzo pie pagina -->
+    <footer class="col-12 text-center text-lg-start">
+      <!-- Copyright -->
+      <div class="text-center p-4">© 2020 Copyright Treasure Arica</div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Fin pie pagina -->
+    <!-- Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Fin Bootstrap -->
+    <!-- JQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Fin JQuery -->
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
+
+<!-- 
+        etiquetas con tamanhos de resolucion
+        <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2" style="background-color: red">s</div>
+        <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2" style="background-color: blue">f</div>
+        <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8" style="background-color: yellow">a</div>
+
+
+ -->
