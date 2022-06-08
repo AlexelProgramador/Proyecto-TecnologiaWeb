@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="/estilos/estilos1.css"rel="stylesheet"type="text/css"/>
+  </head>
+  <body>
+    <div class="navi row justify-content-center">
+      <nav class="col-10 navegador">
+        <h1 class="col-2 logo">
+        <img src="imagenes/Arica.jpg" alt="Logo" class="rounded-circle">
+        </h1>
+        <ul class="col-6 text-primary">
+          <li><a href="/inicio.html">Inicio</a></li>
+          <li><a href="/buscar.html">Buscar</a></li>
+          <li><a href="/lugares.html">Lugares</a></li>
+        </ul>
+        <ul class="col-2 text-primary">
+          <li><a href="/ingresar.html">Ingresar</a></li>
+        </ul>
+      </nav>
+    </div><br>
+  
+
+
+    
+    <div class="container">
+      
+      <div class="col-md-12">
+        <!-- Comienzo del registro -->
+        <div class="card">
+          <div class="card-header" style="background-color: white;">
+            <!-- Botones para logearse y registrarse -->
+            <nav class="nav nav-pills nav-justified">
+              <a class="nav-link active ingresar" href="#">Ingresar</a>
+              <a class="nav-link disabled registrarse" href="#">Registrarse</a>
+            
+            </nav>
+            <!-- <button type="submit" class="btn btn-primary ingresar">Ingresar</button>
+            <button type="submit" class="btn btn-primary registrarse">Registrarse</button> -->
+          </div>
+          <div class="card-body">
+            <!-- Formulario para ingresar o registrarse -->
+              <form>
+                <div class="form-group">
+                    <label for="usuario">Usuario</label>
+                    <input type="text" class="form-control" name="usuario" placeholder="Usuario">
+                </div>
+                <div class="form-group email">
+                  <label for="email">Email</label>
+                  <input type="email" class="form-control" name="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Contrasenha</label>
+                    <input type="password" class="form-control" name="password" placeholder="Contrasenha">
+                </div>
+                <button type="button" class="btn btn-primary btnForm">Ingresar</button>
+            </form>
+          </div>
+          <div class="card-footer text-muted">
+            <!-- Link para formulario de olvidar contrasenha -->
+            <a href="#" class="badge badge-light">olvidaste tu contrasenha?</a>
+          </div>
+        </div>
+        <script src="javascript.js"></script>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="foot row justify-content-center">
+      <footer class="text-center text-lg-start">
+      <!-- Copyright -->
+      <div class="text-center p-4">
+        © 2020 Copyright Treasure Arica
+      </div>
+      <!-- Copyright -->
+      </footer> 
+    </div>
+
+    
+    
+    
+  </body>
+</html>
