@@ -5,6 +5,7 @@
 
 <form action="/lugares" method="POST">
     @csrf
+    @include('msg')
     <div class="mt-3">
         <label for="nombre">Nombre</label>
         <input type="text" id="nombre" name="nombre" class="form-control">

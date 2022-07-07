@@ -6,6 +6,8 @@
 debemos terminar la sentencia con un @endauth -->
 @auth
 <h2 class="mt-2">Bienvenido {{auth()->user()->name ?? auth()->user()->username}}</h2>
+@include('msg')
+
 <a href="lugares/create" class="btn btn-primary">Crear</a>
 <div class="mt-3">
     <h3>Tus sitios</h3>
@@ -28,7 +30,7 @@ debemos terminar la sentencia con un @endauth -->
                 <td scope="row">
                     <div class="d-flex">
                         <a href="/lugares/{{ $lugar->id }}" class="btn btn-info mr-2">Ver</a>
-                        <a href="/lugares/{{ $lugar->id }}" class="btn btn-primary mr-2">Editar</a>
+                        <a href="/lugares/{{ $lugar->id }}/edit" class="btn btn-primary mr-2">Editar</a>
                         <form action="{{ route('lugares.destroy',  $lugar->id) }}" method="POST">
                             @csrf
                             @method('DELETE')
@@ -43,6 +45,7 @@ debemos terminar la sentencia con un @endauth -->
     </table>
 </div>
 <a href="/logout" class="btn btn-danger">Cerrar sesion</a>
+<a href="/" class="btn btn-primary">Ir al menu</a>
 @endauth
 
 @guest

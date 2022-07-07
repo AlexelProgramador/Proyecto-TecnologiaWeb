@@ -5,6 +5,8 @@
 
 <form action="/lugares/{{ $lugar->id }}" method="POST">
     @csrf
+    @include('msg')
+
     @method('PUT')
     <div class="mt-3">
         <label for="nombre">Nombre</label>

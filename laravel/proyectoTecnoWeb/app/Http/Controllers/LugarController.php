@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Lugar;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\LugarRequest;
+
 
 class LugarController extends Controller
 {
@@ -17,6 +19,7 @@ class LugarController extends Controller
     {
 
         $lugares = Lugar::all();
+
         return view('admin.index')->with('lugares', $lugares);
     }
 
@@ -37,16 +40,18 @@ class LugarController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(LugarRequest $request)
     {
         //
         $lugar = new Lugar();
         $lugar->nombre = $request->get("nombre");
         $lugar->descripcion = $request->get("descripcion");
         $lugar->direccion = $request->get("direccion");
+
         $lugar->usuarioID = auth()->id();
+
         $lugar->save();
-        return redirect('/lugares');
+        return redirect('/lugares')->with('success', 'Sitio registrado correctamente');
     }
 
     /**
@@ -85,6 +90,13 @@ class LugarController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $request->validate([
+            'nombre' => 'required',
+            'descripcion' => 'required',
+            'direccion' => 'required',
+
+        ]);
+
         $lugar = Lugar::find($id);
         $lugar->nombre = $request->get("nombre");
         $lugar->descripcion = $request->get("descripcion");
@@ -92,7 +104,7 @@ class LugarController extends Controller
 
         $lugar->save();
 
-        return redirect('/lugares');
+        return redirect('/lugares')->with('success', 'Lugar editado');
     }
 
     /**
@@ -106,6 +118,6 @@ class LugarController extends Controller
         //
         $lugar = Lugar::find($id);
         $lugar->delete();
-        return redirect('/lugares');
+        return redirect('/lugares')->with('success', 'Lugar eliminado');
     }
 }

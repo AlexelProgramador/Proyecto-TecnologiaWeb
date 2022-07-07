@@ -18,9 +18,8 @@ use Illuminate\Support\Facades\Route;
 //     return view('index');
 // });
 
-Route::view('/', 'home')->name('home');
-Route::view('buscar', 'buscar')->name('search');
-Route::view('ingresar', 'iniciarSesion')->name('login');
+Route::view('/', 'visita.home')->name('visita.home');
+Route::resource('buscar', 'App\Http\Controllers\BuscarController');
 
 // Registrarse
 Route::resource('registrarse', 'App\Http\Controllers\RegisterController');

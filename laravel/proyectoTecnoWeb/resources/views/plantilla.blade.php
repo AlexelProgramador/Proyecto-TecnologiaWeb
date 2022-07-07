@@ -13,7 +13,7 @@
 <body class="bg-dark text-light">
     <nav class="navbar sticky-top navbar-dark bg-dark navbar-expand-sm">
         <!-- Logo -->
-        <a class="navbar-brand" href="inicio.html"><img src="./imagenes/logo.png" width="40" height="40" class="rounded-circle" role="img" alt="logo"> Arica Treasures</a>
+        <a class="navbar-brand" href="/"><img src="./imagenes/logo.png" width="40" height="40" class="rounded-circle" role="img" alt="logo"> Arica Treasures</a>
         <!-- Boton para movil -->
         <button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -25,7 +25,7 @@
                 <a href="buscar" class="nav-item nav-link text-white">Buscar</a>
             </div>
             <div class="d-flex flex-row text-center justify-content-center">
-                <a name="Ingresar" id="ingresar" class="text-white" href="ingresar" role="button">ingresar</a>
+                <a name="Ingresar" id="ingresar" class="text-white" href="login" role="button">ingresar</a>
             </div>
         </div>
     </nav>

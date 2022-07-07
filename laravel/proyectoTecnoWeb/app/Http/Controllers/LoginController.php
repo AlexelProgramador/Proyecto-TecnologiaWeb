@@ -10,9 +10,11 @@ class LoginController extends Controller
 {
     public function index()
     {
+
         if (Auth::check()) {
             return redirect('/lugares')->with('success', 'Login account successfully');
         }
+
         return view('auth.login');
     }
     //
