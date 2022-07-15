@@ -1,6 +1,9 @@
 @extends('plantilla')
 
 @section('content')
+<div class="card-footer text-center bg-info ml-5 mr-5">
+        <h1 class="mt-2 text-center">{{ $lugar->nombre }}</h1>
+    </div>
 <div class="container col-md-8 mt-5 mb-5 text-dark">
     <!-- Carousel -->
 
@@ -34,10 +37,10 @@
         <!-- Descripcion del lugar -->
         <div class="card-footer text-center">
             <!-- Titulo -->
-            <h3 class="card-text">{{ $lugar->nombre }}</h3>
+            <h3 class="card-text">Nombre del lugar: {{ $lugar->nombre }}</h3>
             <!-- Descripcion -->
             <p class="card-text">
-                {{$lugar->descripcion}}
+                Descripcion: {{$lugar->descripcion}}
             </p>
             <!-- Ubicacion -->
             <p class="card-text">
