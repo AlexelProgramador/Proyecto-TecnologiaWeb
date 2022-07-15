@@ -1,0 +1,54 @@
+#publicidad{
+    display:inline-block;
+    padding:15px;
+}
+img , iframe{
+    border-radius:15px;
+    border: solid 2px black;
+    max-width: 100%;
+}
+nav{
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+}
+footer{
+    font-family: 'Dancing Script', cursive;
+    font-size: 22px;
+    border: solid 2px black;
+    
+}
+main{
+    padding-left:0px;
+    padding-right: 0px;
+    background-image: url("/Imagen/fondo.png");
+    background-size: cover;
+    background-position: center;
+    border: solid 2px black;
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+    
+}
+.card-group .card-body{
+    background-image: url("/Imagen/carta.png");
+    background-size: cover;
+    background-position: center;
+    border:none;
+}
+.card-body{
+    font-family: none;
+}
+.card-group .card-footer{
+    background-image: url("/Imagen/carta.png");
+    background-size: cover;
+    background-position: center;
+}
+div .card{
+border:none;
+}
+.card-footer .text-center .bg-secondary{
+    background-color: black;
+    border: solid 1px black;
+}
+div.p-5.pb-5.pl-1.pr-1{
+    background-image: url("/Imagen/carta.png");
+}
