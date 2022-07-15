@@ -20,7 +20,7 @@
                 <div class="row no-gutters">
                     <div class="col-md-4">
                         <!-- Imagen -->
-                        <img src="..." class="card-img" alt="...">
+                        <img src="/imagen/{{$lugar->imagenLugar}}" class="card-img" alt="...">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">

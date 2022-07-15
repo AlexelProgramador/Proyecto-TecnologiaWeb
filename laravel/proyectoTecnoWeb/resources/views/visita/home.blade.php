@@ -1,6 +1,15 @@
 @extends('plantilla')
 
 @section('content')
+
+@foreach ($lugares as $lugar)
+
+@if (($lugar->id) == 1){
+{{$lugar->nombre}}
+}
+@endif
+@endforeach
+
 <div class="container-fluid">
     <main class="row">
         <!-- Comienzo carousel -->

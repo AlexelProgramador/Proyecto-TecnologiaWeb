@@ -3,12 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Lugar;
-use Illuminate\Support\Facades\Auth;
-use App\Http\Requests\LugarRequest;
+use App\Models\Imagen;
 
-
-class LugarController extends Controller
+class ImagenController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,10 +14,9 @@ class LugarController extends Controller
      */
     public function index()
     {
-
-        $lugares = Lugar::all();
-
-        return view('admin.index')->with('lugares', $lugares);
+        /** Mando toda la info de la Tabla Imagen al index */
+        $imagenes = Imagen::all();
+        return view('imagen.index')->with('imagenes', $imagenes);
     }
 
     /**
@@ -30,8 +26,7 @@ class LugarController extends Controller
      */
     public function create()
     {
-        //
-        return view('admin.create');
+        return view('imagen.create');
     }
 
     /**
@@ -40,15 +35,10 @@ class LugarController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(LugarRequest $request)
+    public function store(Request $request)
     {
-        //
-        $lugar = new Lugar();
-        $lugar->nombre = $request->get("nombre");
-        $lugar->descripcion = $request->get("descripcion");
-        $lugar->direccion = $request->get("direccion");
+        $imagen = new Imagen();
 
-        $lugar->usuarioID = auth()->id();
         if ($request->hasFile("Imagen")) {
             /** Tomo la Imagen del formulario */
             $Imagen_S = $request->file("Imagen");
@@ -58,11 +48,17 @@ class LugarController extends Controller
             /** Muevo la imagen a la carpeta imagen */
             $Imagen_S->move($Ruta, $NombreImagen);
             /** Subo la refencia a la BD */
-            $lugar->imagenLugar = $NombreImagen;
+            $imagen->Imagen = $NombreImagen;
         }
 
-        $lugar->save();
-        return redirect('/lugares')->with('success', 'Sitio registrado correctamente');
+        /**  
+         * En Ruta es para poner las imagenes en la carpeta Imagen en public
+         */
+        $imagen->lugarID = 1;
+
+        $imagen->save();
+        /** redirecciono al index */
+        return redirect('/imagenes');
     }
 
     /**
@@ -74,8 +70,6 @@ class LugarController extends Controller
     public function show($id)
     {
         //
-        $lugar = Lugar::find($id);
-        return view('admin.show')->with('lugar', $lugar);
     }
 
     /**
@@ -86,9 +80,9 @@ class LugarController extends Controller
      */
     public function edit($id)
     {
-        //
-        $lugar = Lugar::find($id);
-        return view('admin.edit')->with('lugar', $lugar);
+        /** Busco una "imagen" en especifico*/
+        $imagen = Imagen::find($id);
+        return view('imagen.edit')->with('imagen', $imagen);
     }
 
     /**
@@ -100,32 +94,18 @@ class LugarController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
-        $request->validate([
-            'nombre' => 'required',
-            'descripcion' => 'required',
-            'direccion' => 'required',
-
-        ]);
-
-        $lugar = Lugar::find($id);
-        $lugar->nombre = $request->get("nombre");
-        $lugar->descripcion = $request->get("descripcion");
-        $lugar->direccion = $request->get("direccion");
+        /** Similar a store solo actualizo una "Imagen" en especifico*/
+        $imagen = Imagen::find($id);
         if ($request->hasFile("Imagen")) {
-            /** Tomo la Imagen del formulario */
             $Imagen_S = $request->file("Imagen");
             $Ruta = public_path("Imagen/");
-            /** NombreImagen es el nombre de referencia para la imagen, su nombre es la fecha en que fue creado */
             $NombreImagen = date('YmdHis') . "." . $Imagen_S->guessExtension();
-            /** Muevo la imagen a la carpeta imagen */
             $Imagen_S->move($Ruta, $NombreImagen);
-            /** Subo la refencia a la BD */
-            $lugar->imagenLugar = $NombreImagen;
+            $imagen->Imagen = $NombreImagen;
         }
-        $lugar->save();
 
-        return redirect('/lugares')->with('success', 'Lugar editado');
+        $imagen->save();
+        return redirect('/imagenes');
     }
 
     /**
@@ -136,9 +116,9 @@ class LugarController extends Controller
      */
     public function destroy($id)
     {
-        //
-        $lugar = Lugar::find($id);
-        $lugar->delete();
-        return redirect('/lugares')->with('success', 'Lugar eliminado');
+        $imagen = Imagen::find($id);
+
+        $imagen->delete();
+        return redirect('/imagenes');
     }
 }

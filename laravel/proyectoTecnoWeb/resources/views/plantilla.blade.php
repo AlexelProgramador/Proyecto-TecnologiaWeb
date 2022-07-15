@@ -22,19 +22,19 @@
             <!-- Opciones menu -->
             <div class="navbar-nav mr-auto ml-auto text-center">
                 <a href="/" class="nav-item nav-link text-white">Inicio</a>
-                <a href="buscar" class="nav-item nav-link text-white">Buscar</a>
+                <a href="/buscar" class="nav-item nav-link text-white">Buscar</a>
             </div>
             <div class="d-flex flex-row text-center justify-content-center">
-                <a name="Ingresar" id="ingresar" class="text-white" href="login" role="button">ingresar</a>
+                <a name="Ingresar" id="ingresar" class="text-white" href="/login" role="button">ingresar</a>
             </div>
         </div>
     </nav>
     <!-- Content -->
     @yield('content')
-    <footer class="col-xl-12 col-md-12 col-12 text-center text-white bg-dark">
-        <!-- Copyright -->
-        <div class="text-center p-4">© 2020 Copyright Treasure Arica</div>
-        <!-- Copyright -->
+    <footer class="footer">
+        <div class="container">
+            <div class="text-center p-4">© 2020 Copyright Treasure Arica</div>
+        </div>
     </footer>
     <!-- End Content -->
     <!-- Bootstrap -->

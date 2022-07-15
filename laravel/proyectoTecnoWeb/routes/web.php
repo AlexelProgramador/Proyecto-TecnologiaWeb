@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\ComentarioController;
 use Illuminate\Support\Facades\Route;
+use App\Models\Lugar;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,12 +16,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Pagina principal
-// Route::get('/', function () {
-//     return view('index');
-// });
+Route::get('/', function () {
+    $lugares = Lugar::all();
 
-Route::view('/', 'visita.home')->name('visita.home');
+    return view('visita.home')->with('lugares', $lugares);
+});
+
 Route::resource('buscar', 'App\Http\Controllers\BuscarController');
+
 
 // Registrarse
 Route::resource('registrarse', 'App\Http\Controllers\RegisterController');
@@ -30,6 +34,12 @@ Route::resource('login', 'App\Http\Controllers\LoginController');
 //Logout
 Route::resource('logout', 'App\Http\Controllers\LogoutController');
 
+// Imagen
+Route::resource('imagenes', 'App\Http\Controllers\ImagenController');
 
 // Ruta controlador lugar 
 Route::resource('lugares', 'App\Http\Controllers\LugarController');
+
+
+//Ruta comentarios
+Route::post('comentario', [ComentarioController::class, 'guardar'])->middleware('auth')->name('comentario.guardar');

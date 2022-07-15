@@ -14,7 +14,7 @@
                 </ol>
                 <div class="carousel-inner " role="listbox">
                     <div class="carousel-item active carousel-item-left">
-                        <img class="d-block w-100" src="https://mayurutour.com/wp-content/uploads/2020/01/catedral_san_marcos.jpg" data-src="holder.js/900x400?theme=social" alt="catedral" style="width: 800px; height: 500px">
+                        <img class="d-block w-100" src="/imagen/{{$lugar->imagenLugar}}" data-src="holder.js/900x400?theme=social" alt="catedral" style="width: 800px; height: 500px">
                     </div>
                     <div class="carousel-item carousel-item-next carousel-item-left">
                         <img class="d-block w-100" src="https://www.monumentos.gob.cl/sites/default/files/styles/slide_monumentos/public/image-monumentos/00381_mh_15101-24.jpg?itok=spqag_j_" data-src="holder.js/900x400?theme=industrial" alt="monumento" style="width: 800px; height: 500px">
@@ -45,29 +45,46 @@
         <!-- Fin descripcion del lugar -->
     </div>
 
-
     <!-- Comentarios -->
-    <div class="card card-shadow text-center">
-        <div class="card sm-3">
-            <div class="row no-gutters">
-                <div class="col-sm-4">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/User_Circle.png" class="card-img mt-5 ml-1" alt="user" style="width: 100px">
-                </div>
-                <div class="col-sm-8">
-                    <div class="card-body">
-                        <h4 class="card-title">Usuario#2503</h4>
-                        <p class="card-text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-                            sint vitae necessitatibus id laboriosam provident eum aliquid
-                            nostrum a hic.
-                        </p>
-                        <p class="card-text">
-                            <small class="text-muted">Comentado el dia 31/05/22</small>
-                        </p>
+    <div class="comentarios text-white">
+        <h2>Comentarios</h2>
+        @forelse ($lugar->comentario as $comentario)
+        <div class="media ">
+            <div class="card card-shadow text-center text-dark">
+                <div class="card sm-3">
+                    <div class="row no-gutters">
+                        <div class="col-sm-4">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/User_Circle.png" class="card-img mt-5 ml-1" alt="user" style="width: 100px">
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="card-body">
+                                <h4 class="card-title">{{auth()->user()->username ?? $comentario->usuarioID}}</h4>
+                                <p class="card-text">
+                                    {{$comentario->text}}
+                                </p>
+                                @if (($comentario->imagen))
+                                <img class="img-thumbnail" src="/imagen/{{$comentario->imagen}}" alt="" srcset="">
+                                @endif
+                                <p class="card-text">
+                                    <small class="text-muted">Comentado el dia {{$comentario->created_at}}</small>
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        @empty
+        No hay comentarios
+        @endforelse
     </div>
+    @if (Auth::check())
+    @include("visita.comentario-form");
+    @endif
+    @if (!Auth::check())
+    <h3>debes iniciar sesion para comentar</h3>
+    <a href="/login" class="btn btn-primary">Ingresar</a>
+    @endif
+    <!-- Fin comentarios -->
 </div>
 @endsection

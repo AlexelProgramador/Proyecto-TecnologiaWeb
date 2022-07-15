@@ -8,31 +8,25 @@ use Illuminate\Database\Eloquent\Model;
 class Lugar extends Model
 {
     use HasFactory;
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
-     */
-    protected $fillable = [
-        'usuarioID',
-        'nombre',
-        'descripcion',
-        'direccion',
-    ];
+    protected $table = "lugars";
 
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array<int, string>
-     */
-    protected $hidden = [
-        'direccion',
-        'remember_token',
-    ];
+    protected $guarded = [];
+
+    protected $fillable = ['id', 'nombre', 'descripcion', 'direccion', 'usuarioID'];
+
 
     // Modifica el password y encriptandolo.
     public function setPasswordAttribute($value)
     {
         $this->attributes['direccion'] = bcrypt($value);
+    }
+
+    public function comentario()
+    {
+        return $this->hasMany(Comentario::class, 'lugarID');
+    }
+    public function obtenerLugar($id)
+    {
+        return Lugar::find($id);
     }
 }

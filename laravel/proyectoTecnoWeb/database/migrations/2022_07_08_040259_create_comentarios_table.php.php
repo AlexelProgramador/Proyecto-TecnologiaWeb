@@ -13,16 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('lugars', function (Blueprint $table) {
+        Schema::create('comentarios', function (Blueprint $table) {
 
-            $table->engine = 'InnoDB';
             $table->id();
-            $table->string('nombre', 20);
-            $table->string('descripcion', 500);
-            $table->string('direccion', 100)->unique();
-            $table->varchar('imagenLugar')->nullable();
-            $table->timestamps();
+            $table->foreignId('lugarID')->constrained('lugars')->onDelete('cascade');
             $table->foreignId('usuarioID')->constrained('users')->onDelete('cascade');
+            $table->foreignId('comentarioID')->nullable()->constrained('comentarios')->onDelete('cascade');
+            $table->text('text');
+            $table->string('imagen')->nullable();
+            $table->rememberToken();
+            $table->timestamps();
         });
     }
 
@@ -33,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('lugars');
+        //
     }
 };

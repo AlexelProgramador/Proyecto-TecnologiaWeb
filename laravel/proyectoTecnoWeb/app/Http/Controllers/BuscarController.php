@@ -23,7 +23,7 @@ class BuscarController extends Controller
         //Este se ordenara por nombre de manera ascendente
 
         $lugares = DB::table('lugars')
-            ->select('id', 'nombre', 'descripcion', 'direccion')
+            ->select('id', 'nombre', 'descripcion', 'direccion', 'imagenLugar')
             ->where('nombre', 'LIKE', '%' . $texto . '%')
             ->orWhere('direccion', 'LIKE', '%' . $texto . '%')
             ->orderBy('nombre', 'asc');
@@ -31,7 +31,7 @@ class BuscarController extends Controller
         //Luego de la busqueda es necesario poner el get()
         //Esto guardar los valores obtenidos.    
         $lugares = $lugares->get();
-        return view('visita.buscar', compact('lugares', 'texto'));
+        return view('home', compact('lugares', 'texto'));
     }
 
 
