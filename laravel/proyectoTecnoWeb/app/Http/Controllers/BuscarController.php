@@ -55,4 +55,11 @@ class BuscarController extends Controller
         $lugares = Lugar::where('nombre', 'like', '%$nombre%');
         return view('vistar.filtro', compact('lugares', 'similares'));
     }
+    
+    public function iniciar(){
+        $lugares = Lugar::all();
+        return view('visita.home')->with('lugares',$lugares);
+    }
+
+
 }

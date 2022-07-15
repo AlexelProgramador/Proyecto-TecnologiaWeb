@@ -16,11 +16,8 @@ use App\Models\Lugar;
 */
 
 // Pagina principal
-Route::get('/', function () {
-    $lugares = Lugar::all();
+Route::get('/', 'App\Http\Controllers\BuscarController@iniciar');
 
-    return view('visita.home')->with('lugares', $lugares);
-});
 
 Route::resource('buscar', 'App\Http\Controllers\BuscarController');
 
