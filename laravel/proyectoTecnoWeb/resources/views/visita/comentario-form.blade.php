@@ -10,22 +10,22 @@
             <input type="hidden" name="usuarioID" value="{{Auth::user()->id}}">
             <input type="hidden" value="{{$lugar->id}}" name="lugarID">
         </div>
-        <div class="grid grid-cols-1 mt-5 mx-7">
-            <img id="ImagenSeleccionada" style="max-width: 300px;">
-        </div>
-
-        <div class="grid grid-cols-1 mt-5 mx-7">
-            <img id="ImagenSeleccionada" style="max-width: 300px;">
-        </div>
+        
 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Image:</strong>
+                <strong>Subir Imagen (Opcional):</strong>
                 <input type="file" name="Imagen" id="Imagen" class="form-control-file btn btn-outline-primary" placeholder="Imagen">
-                <br><br>
+                <br>
             </div>
         </div>
+        <div class="grid grid-cols-1 mt-5 mx-7">
+            <img id="ImagenSeleccionada" style="max-width: 300px;">
+        </div>
 
+        <div class="grid grid-cols-1 mt-5 mx-7">
+            <img id="ImagenSeleccionada" style="max-width: 300px;">
+        </div>
         <button type="submit" class="btn btn-primary">Comentar</button>
     </form>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>

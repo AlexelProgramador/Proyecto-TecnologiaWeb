@@ -1,7 +1,7 @@
 @extends('plantilla')
 
 @section('content')
-<div class="container col-md-6 mt-5 mb-5 text-dark">
+<div class="container col-md-8 mt-5 mb-5 text-dark">
     <!-- Carousel -->
 
     <div class="card">
@@ -32,21 +32,24 @@
         </div>
         <!-- Fin carousel -->
         <!-- Descripcion del lugar -->
-        <div class="card-footer text-center" style="font-family: none;">
+        <div class="card-footer text-center">
             <!-- Titulo -->
-            <p class="card-text">{{ $lugar->nombre }}</p>
+            <h3 class="card-text">{{ $lugar->nombre }}</h3>
             <!-- Descripcion -->
             <p class="card-text">
                 {{$lugar->descripcion}}
             </p>
             <!-- Ubicacion -->
-            {{$lugar->direccion}}
+            <p class="card-text">
+            Ubicación: {{$lugar->direccion}}
+            </p>
         </div>
         <!-- Fin descripcion del lugar -->
     </div>
 
     <!-- Comentarios -->
     <div class="comentarios text-white">
+        <br>
         <h2>Comentarios</h2>
         @forelse ($lugar->comentario as $comentario)
         <div class="media ">
