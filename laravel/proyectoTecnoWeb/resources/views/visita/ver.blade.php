@@ -48,35 +48,38 @@
     </div>
 
     <!-- Comentarios -->
-    <div class="comentarios text-white">
+    <div class="comentarios text-white col-md-12 mt-5 mb-5">
         <br>
         <h2>Comentarios</h2>
         @forelse ($lugar->comentario as $comentario)
-        <div class="media ">
-            <div class="card card-shadow text-center text-dark">
-                <div class="card sm-3">
-                    <div class="row no-gutters">
+        <div class="media col-md-12 ">
+            <div class="card card-shadow text-center text-dark ">
+                <div class="card ">
+                    <div class="row no-gutters ">
                         <div class="col-sm-4">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/User_Circle.png" class="card-img mt-5 ml-1" alt="user" style="width: 100px">
                         </div>
-                        <div class="col-sm-8">
+                        <div class="col-sm-8 md-12">
                             <div class="card-body">
                                 <h4 class="card-title">{{auth()->user()->username ?? $comentario->usuarioID}}</h4>
                                 <p class="card-text">
                                     {{$comentario->text}}
                                 </p>
                                 @if (($comentario->imagen))
-                                <img class="img-thumbnail" src="/imagen/{{$comentario->imagen}}" alt="" srcset="">
+                                <img class="img-thumbnail" src="/imagen/{{$comentario->imagen}}" alt="" srcset="" >
                                 @endif
                                 <p class="card-text">
                                     <small class="text-muted">Comentado el dia {{$comentario->created_at}}</small>
                                 </p>
                             </div>
                         </div>
+                        
                     </div>
                 </div>
             </div>
+            
         </div>
+        <br>
         @empty
         No hay comentarios
         @endforelse
