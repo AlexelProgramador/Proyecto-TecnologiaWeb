@@ -17,7 +17,7 @@ class ComentarioController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function guardar(ComentarioRequest $request, Lugar $lugar)
+    public function store(ComentarioRequest $request, Lugar $lugar)
     {
         $comentario = new Comentario();
         $comentario->text = $request->get("text");
@@ -73,8 +73,11 @@ class ComentarioController extends Controller
      * @param  \App\Models\Comentario  $comentario
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Comentario $comentario)
+    public function destroy(Request $request, Comentario $comentario)
     {
         //
+
+        $comentario = Comentario::where('id', $comentario->id)->delete();
+        return redirect('/lugares')->with('success', 'Comentario eliminado');
     }
 }

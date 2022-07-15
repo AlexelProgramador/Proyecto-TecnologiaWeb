@@ -31,7 +31,7 @@ class BuscarController extends Controller
         //Luego de la busqueda es necesario poner el get()
         //Esto guardar los valores obtenidos.    
         $lugares = $lugares->get();
-        return view('home', compact('lugares', 'texto'));
+        return view('visita.buscar', compact('lugares', 'texto'));
     }
 
 

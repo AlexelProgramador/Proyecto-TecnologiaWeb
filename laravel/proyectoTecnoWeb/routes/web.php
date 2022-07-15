@@ -42,4 +42,4 @@ Route::resource('lugares', 'App\Http\Controllers\LugarController');
 
 
 //Ruta comentarios
-Route::post('comentario', [ComentarioController::class, 'guardar'])->middleware('auth')->name('comentario.guardar');
+Route::resource('comentario', 'App\Http\Controllers\ComentarioController');
