@@ -1,8 +1,7 @@
 @extends('admin.plantilla')
 
 @section('contenido')
-<h1>Vista Crear del administrador</h1>
-
+<h3>Editar {{$lugar->nombre}}</h3>
 <form action="/lugares/{{ $lugar->id }}" method="POST" enctype="multipart/form-data">
     @csrf
     @include('msg')

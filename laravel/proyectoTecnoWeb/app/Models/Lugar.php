@@ -20,7 +20,7 @@ class Lugar extends Model
     {
         $this->attributes['direccion'] = bcrypt($value);
     }
-
+    // Relacionamos los comentarios con un lugar y ademas se diceque son muchos
     public function comentario()
     {
         return $this->hasMany(Comentario::class, 'lugarID');

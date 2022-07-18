@@ -25,15 +25,17 @@ class LoginRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            //Declaramos como required los inputs username y password
             'username' => 'required',
             'password' => 'required',
         ];
     }
 
+    // Lo que hace esta funcion es permitirme ingresar con mi correo
     public function getCredentials()
     {
         $username = $this->get('username');
+        // En caso de ser correo nos identifica el username con el correo registrado del usuario
         if ($this->isEmail($username)) {
             return [
                 'email' => $username,

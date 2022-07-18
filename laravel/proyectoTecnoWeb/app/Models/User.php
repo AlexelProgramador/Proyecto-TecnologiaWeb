@@ -18,6 +18,7 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+    // Son los atributos que se solicitan
     protected $fillable = [
         'username',
         'name',
@@ -30,6 +31,7 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+    // Escondemos estos datos para no mostrarlos, por proteccion
     protected $hidden = [
         'password',
         'remember_token',

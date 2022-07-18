@@ -29,7 +29,7 @@ debemos terminar la sentencia con un @endauth -->
                 <td scope="row">{{ $lugar->descripcion }}</td>
                 <td scope="row">
                     <div class="d-flex">
-                        <a href="/lugares/{{ $lugar->id }}" class="btn btn-info mr-2">Ver</a>
+                        <a href="/lugares/{{ $lugar->id }}" class="btn btn-info mr-2">Ver comentarios</a>
                         <a href="/lugares/{{ $lugar->id }}/edit" class="btn btn-primary mr-2">Editar</a>
                         <form action="{{ route('lugares.destroy',  $lugar->id) }}" method="POST">
                             @csrf

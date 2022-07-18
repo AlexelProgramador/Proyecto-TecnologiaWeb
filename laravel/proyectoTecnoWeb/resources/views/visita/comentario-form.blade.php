@@ -1,5 +1,5 @@
 <div class="post-coment text-white">
-    <form action="{{route('comentario.guardar', $lugar)}}" role="form" method="POST" enctype="multipart/form-data">
+    <form action="{{route('comentario.store', $lugar)}}" role="form" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
             <input type="hidden" class="form-control" value="{{Auth::user()->username}}" readonly>
@@ -19,10 +19,6 @@
                 <br>
             </div>
         </div>
-        <div class="grid grid-cols-1 mt-5 mx-7">
-            <img id="ImagenSeleccionada" style="max-width: 300px;">
-        </div>
-
         <div class="grid grid-cols-1 mt-5 mx-7">
             <img id="ImagenSeleccionada" style="max-width: 300px;">
         </div>

@@ -26,7 +26,7 @@ class LugarRequest extends FormRequest
     {
         return [
             //
-            'nombre' => 'required',
+            'nombre' => 'required|max:20',
             'descripcion' => 'required',
             'direccion' => 'required|unique:lugars,direccion',
         ];

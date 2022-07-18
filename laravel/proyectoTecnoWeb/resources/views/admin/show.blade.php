@@ -32,12 +32,12 @@
                         </div>
                     </div>
                 </div>
+                <form action="{{ route('comentario.destroy',  $comentario->id) }}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <button class="btn btn-danger mt-3 mb-3">Eliminar</button>
+                </form>
             </div>
-            <form action="{{ route('comentario.destroy',  $comentario->id) }}" method="POST">
-                @csrf
-                @method('DELETE')
-                <button class="btn btn-danger">Eliminar</button>
-            </form>
         </div>
     </div>
     @empty

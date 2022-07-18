@@ -1,4 +1,4 @@
-@extends('plantilla')
+@extends('visita.plantilla')
 
 @section('content')
 <div class="container-fluid mt-3 text-center text-dark">

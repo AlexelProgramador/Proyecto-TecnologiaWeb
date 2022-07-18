@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('nombre', 20);
             $table->string('descripcion', 500);
             $table->string('direccion', 100)->unique();
-            $table->varchar('imagenLugar')->nullable();
+            $table->string('imagenLugar')->nullable();
             $table->timestamps();
             $table->foreignId('usuarioID')->constrained('users')->onDelete('cascade');
         });

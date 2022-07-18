@@ -19,6 +19,12 @@ class ComentarioController extends Controller
      */
     public function store(ComentarioRequest $request, Lugar $lugar)
     {
+        /* 
+        Aqui obtenemos los campos text, el cual sera el comentario
+        el id del lugar para identificar donde se comento
+        usuarioID para obtener quien lo comento
+        
+        */ 
         $comentario = new Comentario();
         $comentario->text = $request->get("text");
         $comentario->lugarID = $request->get("lugarID");
@@ -75,7 +81,7 @@ class ComentarioController extends Controller
      */
     public function destroy(Request $request, Comentario $comentario)
     {
-        //
+        //Esto es para eliminar comentario de un lugar
 
         $comentario = Comentario::where('id', $comentario->id)->delete();
         return redirect('/lugares')->with('success', 'Comentario eliminado');

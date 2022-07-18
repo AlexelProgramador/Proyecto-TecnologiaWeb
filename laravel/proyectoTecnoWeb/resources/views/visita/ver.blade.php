@@ -1,9 +1,9 @@
-@extends('plantilla')
+@extends('visita.plantilla')
 
 @section('content')
 <div class="card-footer text-center bg-info ml-5 mr-5">
-        <h1 class="mt-2 text-center">{{ $lugar->nombre }}</h1>
-    </div>
+    <h1 class="mt-2 text-center">{{ $lugar->nombre }}</h1>
+</div>
 <div class="container col-md-8 mt-5 mb-5 text-dark">
     <!-- Carousel -->
 
@@ -17,10 +17,18 @@
                 </ol>
                 <div class="carousel-inner " role="listbox">
                     <div class="carousel-item active carousel-item-left">
-                        <img class="d-block w-100" src="/imagen/{{$lugar->imagenLugar}}" data-src="holder.js/900x400?theme=social" alt="catedral" style="width: 800px; height: 500px">
+                        @if ($lugar->imagenLugar)
+                        <img class="d-block w-100" src="/imagen/{{$lugar->imagenLugar}}" data-src="holder.js/900x400?theme=social" alt="imagen-turistica" data-holder-rendered="true" style="width: 900px; height: 400px">
+                        @else
+                        <img class="d-block w-100" src="/imagen/default.png" data-src="holder.js/900x400?theme=social" alt="imagen-turistica" data-holder-rendered="true" style="width: 900px; height: 400px">
+                        @endif
                     </div>
                     <div class="carousel-item carousel-item-next carousel-item-left">
-                        <img class="d-block w-100" src="https://www.monumentos.gob.cl/sites/default/files/styles/slide_monumentos/public/image-monumentos/00381_mh_15101-24.jpg?itok=spqag_j_" data-src="holder.js/900x400?theme=industrial" alt="monumento" style="width: 800px; height: 500px">
+                        @if ($lugar->imagenLugar)
+                        <img class="d-block w-100" src="/imagen/{{$lugar->imagenLugar}}" data-src="holder.js/900x400?theme=social" alt="imagen-turistica" data-holder-rendered="true" style="width: 900px; height: 400px">
+                        @else
+                        <img class="d-block w-100" src="/imagen/default.png" data-src="holder.js/900x400?theme=social" alt="imagen-turistica" data-holder-rendered="true" style="width: 900px; height: 400px">
+                        @endif
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -44,7 +52,7 @@
             </p>
             <!-- Ubicacion -->
             <p class="card-text">
-            Ubicación: {{$lugar->direccion}}
+                Ubicación: {{$lugar->direccion}}
             </p>
         </div>
         <!-- Fin descripcion del lugar -->
@@ -69,18 +77,18 @@
                                     {{$comentario->text}}
                                 </p>
                                 @if (($comentario->imagen))
-                                <img class="img-thumbnail" src="/imagen/{{$comentario->imagen}}" alt="" srcset="" >
+                                <img class="img-thumbnail" src="/imagen/{{$comentario->imagen}}" alt="" srcset="">
                                 @endif
                                 <p class="card-text">
                                     <small class="text-muted">Comentado el dia {{$comentario->created_at}}</small>
                                 </p>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
-            
+
         </div>
         <br>
         @empty

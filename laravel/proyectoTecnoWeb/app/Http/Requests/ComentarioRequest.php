@@ -25,7 +25,10 @@ class ComentarioRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            //Como requisitos para el comentario tenemos que el input text,usuarioid y comentarioID son requeridos
+            // Ademas decimos que el usuario debe existir en la tabla users, con su respectivo id
+            // El comentarioID es para responder un comentario(no es implementado en la pagina).
+            // Pero si en su modelo y BD
             'text' => 'required',
             'usuarioID' => 'required|exists:users,id',
             'comentarioID' => 'nullable|exists:comentario,id'
